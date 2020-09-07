@@ -993,19 +993,19 @@ justify-content: flex-start;
 .page.page-id-38 .header-side2 h5 {
 	top: 18%;
 }*/
-.header-side2 h4{
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	display: inline;
-	/*transform: translate(-50%, -50%);*/
-	-ms-transform: translateX(-50%) translateY(-50%);
-	-webkit-transform:  translateX(-50%) translateY(-50%);
-	-moz-transform:  translateX(-50%) translateY(-50%);
-	transform:  translateX(-50%) translateY(-50%);
-	color: #555555;
-	z-index: 9;
-	}
+.header-side2 h4 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: inline;
+    transform: translateX(-50%) translateY(-50%);
+    color: #555555;
+    z-index: 9;
+    font-family: 'hirakakustdw3', sans-serif;
+    letter-spacing: 0px;
+    font-size: 12px;
+    text-transform: uppercase;
+}
 .page.page-id-46 .header-side2 h4 {
 	top: 60%;
 }

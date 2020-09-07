@@ -82,43 +82,6 @@
 <!-------contents-------->
 </main>
 <!---------- main------->
-<div id="ac">
-<ul class="accordion1">
-    <li class="noborder">
-    	<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><p class="ac1"><i class="fas fa-angle-right"></i>ホーム<span>Home</span></a>
-    </li>
-    <li>
-        <a href="<?php echo esc_url( home_url( '/service/' ) ); ?>"><p class="ac2"><i class="fas fa-angle-right"></i>サービス<span>Service</span>
-			<span class="click"></span>
-			<span class="click"></span>
-		</p></a>
-		 <ul class="inner">
-            <li class="content3-1"><a class="servis-child" href="<?php echo esc_url( home_url( '/haken/' ) ); ?>"><i class="fas fa-angle-right"></i>労働者派遣事業に関わる情報<span>Application Requirements</span></a></li>
-        </ul>
-    </li>
-	<li>
-        <a href="<?php echo esc_url( home_url( '/about/' ) ); ?>"><p class="ac3"><i class="fas fa-angle-right"></i>会社概要<span>Recruit</span></p></a>
-    </li>
-	<li>
-        <a href="<?php echo esc_url( home_url( '/base/' ) ); ?>"><p class="ac4"><i class="fas fa-angle-right"></i>拠点案内<span>Recruit</span></p></a>
-    </li>
-	 <li>
-        <a href="<?php echo esc_url( home_url( '/recruit/' ) ); ?>"><p class="ac5"><i class="fas fa-angle-right"></i>採用情報 <span>Recruit</span></p></a>
-    </li>
-	 <li>
-        <a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>"><p class="ac6"><i class="fas fa-angle-right"></i>お問い合わせ <span>Contact</span></p></a>
-    </li>
-	<li>
-        <a href="<?php echo esc_url( home_url( '/sitemap/' ) ); ?>"><p class="ac7"><i class="fas fa-angle-right"></i>サイトマップ <span>Sitemap</span></p></a>
-    </li>
-	 <li>
-        <a href="<?php echo esc_url( home_url( '/sitepolicy/' ) ); ?>"><p class="ac8"><i class="fas fa-angle-right"></i>サイトポリシー <span>Sitepolicy</span></p></a>
-    </li>
-	<li>
-        <a href="<?php echo esc_url( home_url( '/privacy/' ) ); ?>"><p class="ac8"><i class="fas fa-angle-right"></i>プライバシー<span>Privacypolicy</span></p></a>
-    </li>
-</ul>
-</div>
 <img class="img_sp addres_logo" src="images/logo.svg" alt="" width="" height="" border="0" />
 <div class="clone-address">
 	<p><span>本社</span><br>

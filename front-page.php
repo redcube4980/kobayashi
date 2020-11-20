@@ -44,8 +44,8 @@ Template Name: front-page
 				foreach ( $posts as $post ): // ループの開始
 				setup_postdata( $post ); // 記事データの取得
 				?>
-				<time><a href="<?php the_permalink(); ?>"><?php echo get_the_date(); ?></a></time> <span id="oshirase"> お知らせ </span><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-				<div id="topics_r">一覧</div>
+				<time><?php echo get_the_date(); ?></time> <span id="oshirase"> お知らせ </span><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+				<div id="topics_r"><a href="/information/">一覧</a></div>
 				<div id="topics_l"><p>TOPICS</p></div>
 				<?php
   endforeach; // ループの終了
@@ -53,8 +53,8 @@ Template Name: front-page
 ?>
 			</div>
 			<div id="topics_title2">
-					<div id="topics_rsp"><p>TOPICS</p></div>
-					<div id="topics_lsp"><p>一覧</p></div>
+				<div id="topics_rsp"><p>TOPICS</p></div>
+					<div id="topics_lsp"><a href="/information/"><p>一覧</p></a></div>
 				<?php
 				$args = array(
 					'posts_per_page' => 3 // 表示件数の指定
@@ -64,8 +64,7 @@ Template Name: front-page
 				setup_postdata( $post ); // 記事データの取得
 				?>
 			<ul>
-				<li><time><a href="<?php the_permalink(); ?>"><?php echo get_the_date(); ?></a></time> <span>お知らせ</span><br>
-					<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
+				<li><time><?php echo get_the_date(); ?></time> <span id="oshirase">お知らせ</span><br><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
 			</ul>
 			<?php
   				endforeach; // ループの終了

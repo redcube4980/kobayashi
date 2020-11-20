@@ -301,34 +301,115 @@
                 $('.tel').css('display','block');
             }
         }
-        // else if($(this).prop("checked") == false){
-        //     var val = $(this).val();
-        //     if(val == 'tokyo') {
-        //         $('#recruit_inner_1').css('display','none');
-        //     }
-        //     if(val == 'kanagawa') {
-        //         $('#recruit_inner_2').css('display','none');
-        //     }
-        // }
-
-        if($(this).prop("checked") == true){
-            var val = $(this).val();
-            if(val == 'warehouse') {
-                $('#recruit_inner_1').css('display','block');
-            }
-            if(val == 'maneuver') {
-                $('#recruit_inner_2').css('display','block');
-            }
-        }else if($(this).prop("checked") == false){
-            var val = $(this).val();
-            if(val == 'warehouse') {
-                $('#recruit_inner_1').css('display','none');
-            }
-            if(val == 'maneuver') {
-                $('#recruit_inner_2').css('display','none');
-            }
-        }
+        var status = 0;
+    	$('#recruit_inner_1').css('display','none');
+    	$('#recruit_inner_2').css('display','none');
+    	$('#recruit_inner_3').css('display','none');
+    	$('#recruit_inner_4').css('display','none');
+    	var local = $(this).val();
+    	if (val == 'tokyo') {
+			$( "input#kanagawa" ).prop("checked",false);
+		}else if (val == 'kanagawa') {
+			$( "input#tokyo" ).prop("checked",false);
+		}
+		// else if (val == 'warehouse') {
+		// 	$( "input#maneuver" ).prop("checked",false);
+		// }else if (val == 'maneuver') {
+		// 	$( "input#warehouse" ).prop("checked",false);
+		// }
+    	$( "input[type=checkbox]" ).each(function( index ) {
+			if($(this).prop("checked") == true){
+				var val = $(this).val();
+				if (val == 'tokyo') {
+					status = status+1;
+				}else if (val == 'kanagawa') {
+					status = status+2;
+				}else if (val == 'warehouse') {
+					status = status+10;
+				}else if (val == 'maneuver') {
+					status = status+20;
+				}
+	  		}
+		});
+		console.log(status);
+		if(status == 11) {
+			$('#recruit_inner_1').css('display','block');
+		}else if (status == 21) {
+			$('#recruit_inner_2').css('display','block');
+		}else if (status == 12) {
+			$('#recruit_inner_3').css('display','block');
+		}else if (status == 22) {
+			$('#recruit_inner_4').css('display','block');
+		}else if (status == 13) {
+			$('#recruit_inner_1').css('display','block');
+			$('#recruit_inner_3').css('display','block');
+		}else if (status == 23) {
+			$('#recruit_inner_2').css('display','block');
+			$('#recruit_inner_4').css('display','block');
+		}else if (status == 31) {
+			$('#recruit_inner_1').css('display','block');
+			$('#recruit_inner_2').css('display','block');
+		}else if (status == 32) {
+			$('#recruit_inner_3').css('display','block');
+			$('#recruit_inner_4').css('display','block');
+		}else if (status == 33) {
+			$('#recruit_inner_1').css('display','block');
+			$('#recruit_inner_2').css('display','block');
+			$('#recruit_inner_3').css('display','block');
+			$('#recruit_inner_4').css('display','block');
+		}
     });
+  //   $( "input[type=checkbox]" ).on( "click", function() {
+  //   	var status = 0;
+  //   	$('#recruit_inner_1').css('display','none');
+  //   	$('#recruit_inner_2').css('display','none');
+  //   	$('#recruit_inner_3').css('display','none');
+  //   	$('#recruit_inner_4').css('display','none');
+  //   	$( "input[type=checkbox]" ).each(function( index ) {
+		// 	if($(this).prop("checked") == true){
+		// 		var val = $(this).val();
+		// 		if (val == 'tokyo') {
+		// 			status = status+1;
+		// 		}else if (val == 'kanagawa') {
+		// 			status = status+2;
+		// 		}else if (val == 'warehouse') {
+		// 			status = status+10;
+		// 		}else if (val == 'maneuver') {
+		// 			status = status+20;
+		// 		}
+	 //  		}
+		// });
+		// if(status == 11) {
+		// 	$('#recruit_inner_1').css('display','block');
+		// }else if (status == 21) {
+		// 	$('#recruit_inner_2').css('display','block');
+		// }else if (status == 12) {
+		// 	$('#recruit_inner_3').css('display','block');
+		// }else if (status == 22) {
+		// 	$('#recruit_inner_4').css('display','block');
+		// }else if (status == 13) {
+		// 	$('#recruit_inner_1').css('display','block');
+		// 	$('#recruit_inner_3').css('display','block');
+		// }else if (status == 23) {
+		// 	$('#recruit_inner_2').css('display','block');
+		// 	$('#recruit_inner_4').css('display','block');
+		// }else if (status == 31) {
+		// 	$('#recruit_inner_1').css('display','block');
+		// 	$('#recruit_inner_2').css('display','block');
+		// }else if (status == 32) {
+		// 	$('#recruit_inner_3').css('display','block');
+		// 	$('#recruit_inner_4').css('display','block');
+		// }else if (status == 33) {
+		// 	$('#recruit_inner_1').css('display','block');
+		// 	$('#recruit_inner_2').css('display','block');
+		// 	$('#recruit_inner_3').css('display','block');
+		// 	$('#recruit_inner_4').css('display','block');
+		// }
+		// console.log(status);
+  //   });
+
+
+
     $('.recruit-page #check_form').on('click', function () {
         $('.recruit-page  #wpcf7-f59-o1').find('span.wpcf7-not-valid-tip.custom').remove();
         var check = true;

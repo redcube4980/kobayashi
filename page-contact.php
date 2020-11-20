@@ -16,7 +16,8 @@ Template Name: page-contact
           <p class="page-title-text-2">なんでもお気軽にお問い合わせください。</p>
         </div>
       </div>
-      <img class="main-image" alt="お問い合わせ" src="<?=get_template_directory_uri()?>/images/privacy-policy-banner.jpg">
+		<div class="img-box">
+      <img class="main-image" alt="お問い合わせ" src="<?=get_template_directory_uri()?>/images/privacy-policy-banner.jpg"></div>
       <div class="page-title-bottom">お問い合わせ</div>
   	</div>
   	<div class="main-content">

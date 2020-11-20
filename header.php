@@ -3,7 +3,6 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="keywords" content="">
-	<meta name="description" content="">
 	<title>コバヤシエンタープライズ</title>
 	<!--[if lt IE 9]>-->
 	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -73,23 +72,23 @@
 	</div>
 	<div class="header-side2">
 		<h5><?php custom_breadcrumb(); ?></h5>
-		<h5 class="h5-front"><?php if ( is_home() || is_front_page() ) echo(ホーム); ?></h5>
+		<h5 class="h5-front"><?php if (is_front_page('') ) echo('ホーム'); ?></h5>
 			<h4>
 				<?php 
-				if ( is_home() || is_front_page() ) echo(Home); 
-				elseif( is_page(service) ) echo (Service); 
-				elseif( is_page(about) ) echo (ABOUT);
-				elseif( is_page(president) ) echo ('Pres.'); 
-				elseif( is_page(recruit) ) echo (Recruit);
-				elseif( is_page(contact) ) echo (Contact); 
-				elseif( is_page(sitemap) ) echo (Sitemap);
-				elseif( is_page(privacypolicy) ) echo ('PRIVACY POLICY'); 
-				elseif( is_page(haken) ) echo (Service);
-				elseif( is_page(base) ) echo (BASE); 
-				elseif( is_page(sitepolicy) ) echo ('SITE<br>POLICY'); 
+				if ( is_home() || is_front_page() ) echo('Home');
+				elseif( is_page('service') ) echo ('Service'); 
+				elseif( is_page('about') ) echo ('ABOUT');
+				elseif( is_page('president') ) echo ('Pres.'); 
+				elseif( is_page('recruit') ) echo ('Recruit');
+				elseif( is_page('contact') ) echo ('Contact'); 
+				elseif( is_page('sitemap') ) echo ('Sitemap');
+				elseif( is_page('privacypolicy') ) echo ('PRIVACY POLICY'); 
+				elseif( is_page('haken') ) echo ('Service');
+				elseif( is_page('base') ) echo ('BASE'); 
+				elseif( is_page('sitepolicy') ) echo ('SITE<br>POLICY'); 
 				elseif( is_page('contact-thanks') ) echo ('CONTACT<br>THANKS');
 				elseif( is_page('recruit-thanks') ) echo ('RECRUIT<br>THANKS'); 
-				elseif( is_page(information) ) echo (INFO); 
+				elseif( is_page('archive') ) echo ('INFO'); 
 				?>
 			</h4>
 		<img src="<?php echo( get_stylesheet_directory_uri() ); ?>/images/header2_img.jpg" class="header2_img" alt="" width="" height="" border="0" />

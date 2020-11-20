@@ -16,7 +16,8 @@ Template Name: page-recruit
         <p class="page-title-text-2">物流の世界で一緒に働いてみませんか？</p>
       </div>
     </div>
-    <img class="main-image" alt="採用情報" src="<?=get_template_directory_uri()?>/images/recruit-policy-banner.jpg">
+		<div class="img-box">
+    <img class="main-image" alt="採用情報" src="<?=get_template_directory_uri()?>/images/recruit-policy-banner.jpg"></div>
     <div class="page-title-bottom">採用情報</div>
 	</div>
 	<div class="main-content">

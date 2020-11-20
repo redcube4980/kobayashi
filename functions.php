@@ -1,9 +1,10 @@
 <?php
+add_editor_style( 'style.css' );
 if ( ! function_exists( 'custom_breadcrumb' ) ) {
     function custom_breadcrumb( $wp_obj = null ) {
 
         // トップページでは何も出力しない
-        if ( is_home() || is_front_page() ) return false; 
+        if ( is_front_page() ) return false; 
 		
         //そのページのWPオブジェクトを取得
         $wp_obj = $wp_obj ?: get_queried_object();
@@ -21,9 +22,14 @@ if ( ! function_exists( 'custom_breadcrumb' ) ) {
              * ※ 添付ファイルページでは is_single() も true になるので先に分岐
              */
             echo '<li><span>'. $wp_obj->post_title .'</span></li>';
-
+		} elseif ( is_home() ) {
+			// 投稿自身の表示
+            echo '<li><span>インフォメーション一覧</span></li>';
+				
         } elseif ( is_single() ) {
-
+			echo '<li>'.
+				'<a href="/information/">'.
+                '<span>インフォメーション一覧 <span class="ie">'.'<i>＞ </i>'.'</span>'.'</span>'.'</a>'.'</li>';
             /**
              * 投稿ページ ( $wp_obj : WP_Post )
              */
@@ -56,50 +62,6 @@ if ( ! function_exists( 'custom_breadcrumb' ) ) {
                 $the_tax = 'category';  //通常の投稿の場合、カテゴリーを表示
             }
 
-            // タクソノミーが紐づいていれば表示
-            if ( $the_tax !== "" ) {
-
-                $child_terms = array();   // 子を持たないタームだけを集める配列
-                $parents_list = array();  // 子を持つタームだけを集める配列
-
-                // 投稿に紐づくタームを全て取得
-                $terms = get_the_terms( $post_id, $the_tax );  
-
-                //全タームの親IDを取得
-                foreach ( $terms as $term ) {
-                    if ( $term->parent !== 0 ) $parents_list[] = $term->parent;
-                }
-
-                //親リストに含まれないタームのみ取得
-                foreach ( $terms as $term ) {
-                    if ( ! in_array( $term->term_id, $parents_list ) ) $child_terms[] = $term;
-                }
-
-                // 最下層のターム配列から一つだけ取得
-                $term = $child_terms[0];
-
-                if ( $term->parent !== 0 ) {
-
-                    // 親タームのIDリストを取得
-                    $parent_array = array_reverse( get_ancestors( $term->term_id, $the_tax ) );
-
-                    foreach ( $parent_array as $parent_id ) {
-                        $parent_term = get_term( $parent_id, $the_tax );
-                        echo '<li>'.
-                                '<a href="'. get_term_link( $parent_id, $the_tax ) .'">'.
-                                    '<span>'. $parent_term->name .'</span>'.
-                                '</a>'.
-                             '</li>';
-                    }
-                }
-
-                // 最下層のタームを表示
-                echo '<li>'.
-                        '<a href="'. get_term_link( $term->term_id, $the_tax ). '">'.
-                            '<span>'. $term->name .'</span>'.
-                        '</a>'.
-                     '</li>';
-            }
 
             // 投稿自身の表示
             echo '<li><span>'. $post_title .'</span></li>';
@@ -331,4 +293,16 @@ function custom_text_confirmation_validation_filter( $result, $tag ) {
 // function custom_clock_form_tag_handler( $tag ) {
 //     return '<input name="phone1"><span class="hrd"></span><input name="phone2"><span class="hrd"></span><input name="phone3">';
 // }
+
+
+
+function post_has_archive( $args, $post_type ) {
+	if ( 'post' == $post_type ) {
+		$args['rewrite'] = true;
+		$args['has_archive'] = 'infomation';
+	}
+	return $args;
+}
+add_filter( 'register_post_type_args', 'post_has_archive', 10, 2 );
+
 ?>

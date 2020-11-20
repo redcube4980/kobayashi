@@ -34,6 +34,7 @@ list-style: none;
 a {  
   color: inherit;
 	text-decoration: none;
+	font-size: 2vh;
 }
 a:hover{
 	text-decoration: underline;
@@ -493,10 +494,10 @@ main .main1 .main_content p {
 .main_img{
 	width: calc(100% + 180px);
 	float: left;
-	height: auto;
 	object-fit: cover;
 	min-height: 400px;
 	transform: translateX(-180px);
+	height: 100%;
 }
 .main_p{
 	position: absolute;
@@ -899,8 +900,11 @@ h2{
 	margin-top: 37px;
 	text-shadow: 1px 1px 5px #3c3c3c;
 	}
+a {
+    font-size: 1.6vh;
+}
 .address h3{
-	font-size: 20px;
+	font-size: 1.3vh;
 	margin-top: 10px;
 	margin-bottom: 10px;
 	color: #fff;
@@ -974,7 +978,7 @@ justify-content: flex-start;
 		top: 12%;
 	}
 	.header-side2 h5 ul li {
-
+        font-size: 1.5vh;
 	}
 	.header-side2 h5 span.ie {
 		position: absolute;
@@ -1039,8 +1043,8 @@ justify-content: flex-start;
 	width: 250px;
 	float: left;
 	position: relative;
-	margin-top: 15%;
-	margin-bottom: 15%;
+	margin-top: 3vh;
+	margin-bottom: 3vh;
 	transition: all 0s;
 	margin-left: 35px;
 }
@@ -1092,7 +1096,7 @@ header nav ul{
 	height: 70%;
 	}
 .servis-child{
-	font-size: 13px;	
+	font-size: 1.3vh;	
 }
 
 /*************************************フッダー***************************************/
@@ -1367,12 +1371,13 @@ display: block;
 .address p{
 		margin-bottom: 12px;
 		margin-top: 0px;
+	    font-size: 1.3vh;
 	}
 }
 .page-title {
   position: relative;
 }
-.page-title .main-image:before {
+.main-image::before {
 	content: '';
     width: 100%;
     height: 100%;
@@ -1396,6 +1401,7 @@ display: block;
   width: 100%;
   left: 0px;
   bottom: 35px;
+  z-index: 2;
 }
 .page-title .page-title-inner h2 {
   margin-top: 0px;
@@ -1635,6 +1641,10 @@ ul.type1 li.row-item:nth-child(7n) .row-item-right {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
+.img-box{
+	display: block;
+	background-color: #000;
+}
 .main-content img,
 img.main-image {
 	max-width: 100%;
@@ -1643,6 +1653,10 @@ img.main-image {
 	font-size: 18px;
 	margin: 0px;
 	padding: 0px;
+	color: #000
+}
+.cate-archive .main-content h3 {
+	color: #000
 }
 .main-content .detail-page-title h3 {
 	background:  #3a90cd;
@@ -1988,6 +2002,7 @@ service-detail-block {
 }
 #breadcrumb ul li:last-child {
 	color: #005EB6;
+	margin-top: 20px;
 }
 /*.page.page-id-12 .header-side2 h4,
 .page.page-id-46 .header-side2 h4,
@@ -2618,6 +2633,7 @@ sup {
 		width: 100%;
 		height: 200px;
     	object-fit: cover;
+		opacity: 0.8;
 	}
 	.md {
 	    display: none;

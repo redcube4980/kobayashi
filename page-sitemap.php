@@ -16,14 +16,15 @@ Template Name: page-sitemap
           <p>こちらよりご確認ください。</p>
         </div>
       </div>
+	 <div class="img-box">
       <img class="main-image" alt="サイトマップ" src="<?=get_template_directory_uri()?>/images/sitemap-bg.jpg">
-      <div class="page-title-bottom">サイトマップ</div>
+      <div class="page-title-bottom">サイトマップ</div></div>
   	</div>
   	<div class="main-content">
   		<div class="cate-sitemap">
 	        <h3><a href="http://kobayashi.cube-stg.com/service">>> <span>サービス</span></a></h3>
 	        <ul>
-	          <li><a href="http://kobayashi.cube-stg.com/privacypolicy/">■個人情報保護方針</a>　<a href="http://kobayashi.cube-stg.com/service/haken/">■労働者派遣事業に関わる情報</a></li>
+	          <li><a href="http://kobayashi.cube-stg.com/service/haken/">■労働者派遣事業に関わる情報</a></li>
 	        </ul>
 	    </div>
 	    <div class="cate-sitemap">

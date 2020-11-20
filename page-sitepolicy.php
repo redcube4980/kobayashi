@@ -16,7 +16,8 @@ Template Name: page-sitepolicy
           <p class="page-title-text-2">こちらをご覧ください。</p>
         </div>
       </div>
-      <img class="main-image" alt="サイトポリシー" src="<?=get_template_directory_uri()?>/images/privacy-policy-banner.jpg">
+		<div class="img-box">
+      <img class="main-image" alt="サイトポリシー" src="<?=get_template_directory_uri()?>/images/privacy-policy-banner.jpg"></div>
       <div class="page-title-bottom">サイトポリシー</div>
   </div>
   <div class="main-content">

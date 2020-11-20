@@ -16,7 +16,8 @@ Template Name: page-recruit-thanks
         <p class="page-title-text-2">未経験も大歓迎！わたしたちと一緒に働きませんか？</p>
       </div>
     </div>
-    <img class="main-image" alt="採用情報" src="<?=get_template_directory_uri()?>/images/recruit-policy-banner.jpg">
+	<div class="img-box">
+    <img class="main-image" alt="採用情報" src="<?=get_template_directory_uri()?>/images/recruit-policy-banner.jpg"></div>
     <div class="page-title-bottom">採用情報</div>
 	</div>
 	<div class="main-content">

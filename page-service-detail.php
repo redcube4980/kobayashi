@@ -16,12 +16,13 @@ Template Name: page-service-detail
           <p>様々な物流付帯サービスを提供しています。</p>
         </div>
       </div>
+		<div class="img-box">
       <img class="main-image" alt="労働者派遣事業に関わる情報" src="<?=get_template_directory_uri()?>/images/service-image.jpg">
-      <div class="page-title-bottom">労働者派遣事業に関わる情報</div>
+      <div class="page-title-bottom">労働者派遣事業に関わる情報</div></div>
   	</div>
     <div class="main-content">
 	    <div class="service-detail-title">
-        	<h3>株式会社コバヤシ・エンタープライズ　横浜支店</h3>
+        	<h3>株式会社コバヤシ・エンタープライズ　横浜支店(令和2年度)</h3>
       	</div>
       	<ul class="service-detail-block have-border">
         	<li class="service-detail-row clearfix">
@@ -94,7 +95,12 @@ Template Name: page-service-detail
 	    </ul>
       	<div class="service-detail-table">
 	        <h3>派遣労働者教育訓練に関する事項</h3>
-	        <table>
+	        <?php if (have_posts()): ?>
+				<?php while (have_posts()) : the_post(); ?>
+				<?php echo get_field('content_table'); ?>
+				<?php endwhile; ?>
+			<?php endif; ?>
+	        <!-- <table>
 	        	<thead>
 		          	<tr>
 			            <th class="first">教育訓練の内容</th>
@@ -125,7 +131,7 @@ Template Name: page-service-detail
 		            <td class="no-bottom">無</td>
 		            <td class="no-bottom last">無</td>
 		        </tr>
-	        </table>
+	        </table> -->
 	    </div>
     </div>
     <div class="footer-page">

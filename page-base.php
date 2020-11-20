@@ -16,7 +16,8 @@ Template Name: page-base
           <p>展開しています。</p>
         </div>
       </div>
-      <img class="main-image" alt="拠点案内" src="<?=get_template_directory_uri()?>/images/base-banner.jpg">
+		<div class="img-box">
+      <img class="main-image" alt="拠点案内" src="<?=get_template_directory_uri()?>/images/base-banner.jpg"></div>
       <div class="page-title-bottom">拠点案内</div>
   </div>
   <div class="main-content">

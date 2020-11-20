@@ -16,16 +16,17 @@ Template Name: page-privacy
           <p class="page-title-text-2">ついてはこちらをご覧ください。</p>
         </div>
       </div>
+		<div class="img-box">
       <img class="main-image" alt="プライバシーポリシー" src="<?=get_template_directory_uri()?>/images/privacy-policy-banner.jpg">
-      <div class="page-title-bottom">プライバシーポリシー</div>
+      <div class="page-title-bottom">プライバシーポリシー</div></div>
   </div>
   <div class="main-content">
     <div class="detail-page-title">
       <h3>個人情報の取り扱いについて</h3>
     </div>
     <div class="main-content-text block1">
-    	<p class="date text-right">2020年8月</p>
-    	<p>当社は、人材派遣業並びに業務請け負い業を主とする個人情報を取り扱う業務を行っております。</p>
+    	<p class="date text-right">2020年10月</p>
+    	<p>当社は、人材派遣業並びに業務請負業を主とする個人情報を取り扱う業務を行っております。</p>
     	<p class="text2">これらの個人情報の保護の重要性を自覚し、<span>個人情報の保護に関するコンプライアンス・プログラムを制定し、</span></p>
       <p>当社で業務に従事する全ての者が、個人情報の適切な保護に努めます。</p>
     	<p>当社のコンプライアンス・プログラムは以下の方針で規定しています。</p>
@@ -61,7 +62,7 @@ Template Name: page-privacy
     	<div class="address-text">
     		<p class="contact-in">お問い合わせ先</p>
     		<p>〒２３１－０８０１　<br class="sm">神奈川県横浜市中区新山下３－９－１</p>
-    		<p>ＴＥＬ０４５ー６２５ー０４４１　<br class="sm">ＦＡＸ０４５－６２５－００４２</p>
+    		<p>ＴＥＬ０４５ー６２５ー０４４１　<br class="sm">ＦＡＸ０４５－６２５－０４４２</p>
     		<p class="email">MAIL info@kobayashi-e.co.jp</p>
     	</div>
     </div>

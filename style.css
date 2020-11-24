@@ -900,9 +900,6 @@ h2{
 	margin-top: 37px;
 	text-shadow: 1px 1px 5px #3c3c3c;
 	}
-a {
-    font-size: 1.6vh;
-}
 .address h3{
 	font-size: 1.3vh;
 	margin-top: 10px;
@@ -999,7 +996,7 @@ justify-content: flex-start;
 }*/
 .header-side2 h4 {
     position: absolute;
-    top: 50%;
+    top: 60%;
     left: 50%;
     display: inline;
     transform: translateX(-50%) translateY(-50%);

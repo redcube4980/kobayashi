@@ -20,6 +20,7 @@ Template Name: page-service-detail
       <img class="main-image" alt="労働者派遣事業に関わる情報" src="<?=get_template_directory_uri()?>/images/service-image.jpg">
       <div class="page-title-bottom">労働者派遣事業に関わる情報</div></div>
   	</div>
+	<div class="main-content">
 	<?php if (have_posts()): ?>
 	<?php while (have_posts()) : the_post(); ?>
 	<?php the_content(); ?>
@@ -28,6 +29,7 @@ Template Name: page-service-detail
 	<?php else: ?>
 	<!-- 投稿が無い場合の処理 -->
 	<?php endif; ?>
+	</div>
     <div class="footer-page">
         <a href="#" class="backtotop">ページTOPに戻る</a>
         <div class="clearfix"></div>

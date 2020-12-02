@@ -20,14 +20,16 @@ Template Name: page-about
       <img class="main-image" alt="会社概要" src="<?=get_template_directory_uri()?>/images/about-banner.jpg"></div>
       <div class="page-title-bottom">会社概要</div>
   </div>
-  <?php if (have_posts()): ?>
-	<?php while (have_posts()) : the_post(); ?>
-	<?php the_content(); ?>
-	<?php endwhile; ?>
-	<?php wp_reset_postdata(); ?>
-	<?php else: ?>
-	<!-- 投稿が無い場合の処理 -->
-	<?php endif; ?>
+	<div class="main-content">
+		<?php if (have_posts()): ?>
+		<?php while (have_posts()) : the_post(); ?>
+		<?php the_content(); ?>
+		<?php endwhile; ?>
+		<?php wp_reset_postdata(); ?>
+		<?php else: ?>
+		<!-- 投稿が無い場合の処理 -->
+		<?php endif; ?>
+	</div>
   <div class="footer-page">
       <a href="#" class="backtotop">ページTOPに戻る</a>
       <div class="clearfix"></div>
